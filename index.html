@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tryout UTBK 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HALAMAN UTAMA (HOME) -->
+    <div id="home-page" class="page active">
+        <div class="container">
+            <div class="hero">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 10px;">
+        <h1>🎯 Tryout UTBK 2026</h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+    </div>
+                <p class="subtitle">Simulasi Ujian Tulis Berbasis Komputer</p>
+                
+                <div class="info-card">
+                    <h2>📋 Informasi Tryout</h2>
+                    <div class="subtest-list">
+                        <div class="subtest-item">
+                            <span class="subtest-name">1. Kemampuan Penalaran Umum</span>
+                            <span class="subtest-detail">30 soal • 30 menit</span>
+                        </div>
+                        <div class="subtest-item">
+                            <span class="subtest-name">2. Pengetahuan dan Pemahaman Umum</span>
+                            <span class="subtest-detail">20 soal • 15 menit</span>
+                        </div>
+                        <div class="subtest-item">
+                            <span class="subtest-name">3. Kemampuan Memahami Bacaan dan Menulis</span>
+                            <span class="subtest-detail">20 soal • 25 menit</span>
+                        </div>
+                        <div class="subtest-item">
+                            <span class="subtest-name">4. Pengetahuan Kuantitatif</span>
+                            <span class="subtest-detail">20 soal • 20 menit</span>
+                        </div>
+                        <div class="subtest-item">
+                            <span class="subtest-name">5. Literasi dalam Bahasa Indonesia</span>
+                            <span class="subtest-detail">30 soal • 42,5 menit</span>
+                        </div>
+                        <div class="subtest-item">
+                            <span class="subtest-name">6. Literasi dalam Bahasa Inggris</span>
+                            <span class="subtest-detail">20 soal • 20 menit</span>
+                        </div>
+                        <div class="subtest-item">
+                            <span class="subtest-name">7. Penalaran Matematika</span>
+                            <span class="subtest-detail">20 soal • 42,5 menit</span>
+                        </div>
+                    </div>
+                    <div class="total-info">
+                        <strong>Total: 160 soal • 195 menit</strong>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <label for="nama-peserta">Nama Peserta:</label>
+                    <input type="text" id="nama-peserta" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="input-section">
+                    <label for="kode-akses">🔑 Kode Akses Tryout:</label>
+                    <input type="password" id="kode-akses" placeholder="Masukkan kode akses">
+                </div>
+
+                <button class="btn-start" onclick="startTryout()">
+                    🚀 Mulai Tryout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HALAMAN TRYOUT (SAAT UJIAN) -->
+    <div id="tryout-page" class="page">
+        <div class="tryout-container">
+            <div class="tryout-header">
+                <div class="header-left">
+                    <h2 id="subtest-title">Subtest 1</h2>
+                    <p id="participant-name"></p>
+                </div>
+                <div class="header-right">
+                    <div class="timer" id="timer">
+                        <span class="timer-icon">⏱️</span>
+                        <span id="time-display">30:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tryout-main">
+                <div class="question-section">
+                    <div class="question-header">
+                        <span class="question-number" id="question-number">Soal 1</span>
+                        <span class="question-type" id="question-type">Pilihan Ganda</span>
+                    </div>
+                    
+                    <div class="question-content" id="question-content">
+                        Loading...
+                    </div>
+
+                    <div class="answer-section" id="answer-section">
+                        <!-- Opsi jawaban akan muncul di sini -->
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button class="btn-nav btn-prev" onclick="prevQuestion()">
+                            ← Sebelumnya
+                        </button>
+                        <button class="btn-nav btn-next" onclick="nextQuestion()">
+                            Selanjutnya →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="question-nav-sidebar">
+                    <h3>Navigasi Soal</h3>
+                    <div class="question-grid" id="question-grid">
+                        <!-- Nomor soal akan muncul di sini -->
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="legend-box unanswered"></span>
+                            <span>Belum dijawab</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-box answered"></span>
+                            <span>Sudah dijawab</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-box current"></span>
+                            <span>Soal saat ini</span>
+                        </div>
+                    </div>
+                    <button class="btn-finish" onclick="finishSubtest()">
+                        Selesai Subtest ✓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HALAMAN TRANSISI (SELESAI SUBTEST) -->
+    <div id="transition-page" class="page">
+        <div class="container">
+            <div class="transition-content">
+                <div class="checkmark">✓</div>
+                <h2 id="completed-subtest">Subtest Selesai!</h2>
+                <div class="score-preview">
+                    <p>Soal dijawab: <span id="answered-count">0</span> dari <span id="total-questions">0</span></p>
+                </div>
+                <div class="next-subtest-info" id="next-subtest-info">
+                    <h3>Subtest Selanjutnya:</h3>
+                    <p id="next-subtest-name"></p>
+                    <p id="next-subtest-detail"></p>
+                </div>
+                <button class="btn-start" onclick="startNextSubtest()">
+                    Lanjut ke Subtest Berikutnya →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HALAMAN HASIL -->
+    <div id="result-page" class="page">
+        <div class="container">
+            <div class="result-content">
+                <h1>🎉 Tryout Selesai!</h1>
+                <p class="result-name" id="result-name"></p>
+                
+                <div class="result-summary">
+                    <h2>📊 Ringkasan Hasil</h2>
+                    <div class="result-grid" id="result-grid">
+                        <!-- Hasil akan muncul di sini -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL KONFIRMASI -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h3>⚠️ Konfirmasi</h3>
+            <p id="modal-message">Apakah Anda yakin ingin menyelesaikan subtest ini?</p>
+            <p class="modal-warning" id="modal-warning"></p>
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="closeModal()">Batal</button>
+                <button class="btn-confirm" onclick="confirmFinish()">Ya, Selesai</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- MODAL WAKTU HABIS -->
+<div id="timeout-modal" class="modal">
+    <div class="modal-content">
+        <h3>⏰ Waktu Habis!</h3>
+        <p id="timeout-message">Waktu untuk subtest ini telah habis. Akan berpindah ke subtest berikutnya dalam 3 detik...</p>
+        <div class="modal-buttons">
+            <button class="btn-confirm" onclick="timeoutContinue()">Lanjutkan Sekarang</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Data Soal per Subtest -->
+<script src="data/subtest1.js"></script>
+<script src="data/subtest2.js"></script>
+<script src="data/subtest3.js"></script>
+<script src="data/subtest4.js"></script>
+<script src="data/subtest5.js"></script>
+<script src="data/subtest6.js"></script>
+<script src="data/subtest7.js"></script>
+<script src="data/index.js"></script>
+<script src="data/answerKeys.js"></script>
+<!-- Main Script -->
+<script src="script.js"></script>
+</body>
+</html>
