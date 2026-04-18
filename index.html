@@ -164,15 +164,31 @@
     <div id="result-page" class="page">
         <div class="container">
             <div class="result-content">
-                <h1>🎉 Tryout Selesai!</h1>
+                <h1>Tryout Selesai!</h1>
                 <p class="result-name" id="result-name"></p>
                 
-                <div class="result-summary">
-                    <h2>📊 Ringkasan Hasil</h2>
+                                <div class="result-summary">
                     <div class="result-grid" id="result-grid">
                         <!-- Hasil akan muncul di sini -->
                     </div>
                 </div>
+
+                <!-- Tombol Export Data -->
+                <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+                    <button class="btn-start" onclick="exportAllData()" style="background: #28a745; padding: 12px 25px;">
+                        📥 Export JSON
+                    </button>
+                    <button class="btn-start" onclick="exportToCSV()" style="background: #17a2b8; padding: 12px 25px;">
+                        📊 Export CSV
+                    </button>
+                    <button class="btn-start" onclick="sendToGoogleSheet()" style="background: #7b2cbf; padding: 12px 25px;">
+                        📤 Kirim ke Google Sheets
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
             </div>
         </div>

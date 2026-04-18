@@ -88,7 +88,7 @@ const answerKeys = {
     3: {
         0: '13',    // soal 1 (isian angka)
         1: '7',     // soal 2 (isian angka)
-        2: '16',    // soal 3
+        2: 'E',    // soal 3
         3: 'D',     // soal 4
         4: 'B',     // soal 5
         5: 'D',     // soal 6
@@ -111,13 +111,13 @@ const answerKeys = {
     // SUBTEST 5: Literasi Bahasa Indonesia (20 soal)
     4: {
         0: 'A',    // soal 1
-        1: 'E',    // soal 2
-        2: 'B',    // soal 3
+        1: 'A',    // soal 2
+        2: 'C',    // soal 3
         3: 'B',    // soal 4
-        4: 'A',    // soal 5
-        5: 'A',    // soal 6
-        6: 'A',    // soal 7
-        7: 'A',    // soal 8
+        4: 'C',    // soal 5
+        5: 'E',    // soal 6
+        6: 'C',    // soal 7
+        7: 'C',    // soal 8
         8: 'C',    // soal 9
         9: 'B',    // soal 10
         10: 'C',   // soal 11
@@ -126,9 +126,9 @@ const answerKeys = {
         13: 'C',   // soal 14
         14: 'E',   // soal 15
         15: 'B',   // soal 16
-        16: 'A',   // soal 17
+        16: 'C',   // soal 17
         17: 'D',   // soal 18
-        18: 'E',   // soal 19
+        18: 'D',   // soal 19
         19: 'A'    // soal 20
     },
 

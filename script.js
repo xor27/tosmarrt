@@ -12,9 +12,14 @@ const subtests = [
 // ==================== DATA SISWA DAN KODE AKSES ====================
 const studentData = [
     { name: "Xavier", code: "UTBKSMARRT#1" },
-    { name: "Livia", code: "UTBKSMARRT#2" },
-    { name: "Samuel", code: "UTBKSMARRT#3" },
-    { name: "Moniq", code: "UTBKSMARRT#4" }
+    { name: "Xavier C. Nathan", code: "UTBKSMARRT#2" },
+    { name: "Livia", code: "UTBKSMARRT#3" },
+    { name: "Samuel Thrystan Marsidi", code: "UTBKSMARRT#4" },
+    { name: "Benedicta Filia Dominique", code: "UTBKSMARRT#4" },
+    { name: "Bimbel SMARRT", code: "UTBKSMARRT#5" },
+    { name: "Tiara", code: "UTBKSMARRT#6" },
+    { name: "Reni", code: "UTBKSMARRT#7" },
+    { name: "Maya", code: "UTBKSMARRT#8" }
 ];
 
 // Untuk menyimpan kode yang sudah digunakan (agar tidak bisa dipakai ulang)
@@ -819,6 +824,97 @@ function loadSavedTheme() {
         document.body.classList.remove('light-mode');
         if (toggleBtn) toggleBtn.innerHTML = '🌙 Dark';
     }
+}
+
+// ==================== FUNGSI EXPORT DATA ====================
+
+function exportAllData() {
+    const data = {
+        name: state.participantName,
+        code: state.accessCode,
+        timestamp: new Date().toISOString(),
+        date: new Date().toLocaleString('id-ID'),
+        answers: state.answers,
+        scores: {}
+    };
+    
+    for (let i = 0; i < subtests.length; i++) {
+        const scoreData = calculateSubtestScore(i);
+        data.scores[i] = {
+            subtestName: subtests[i].name,
+            correctPoints: scoreData.correct,
+            totalPoints: scoreData.total
+        };
+    }
+    
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `tryout_${state.participantName}_${new Date().toISOString().slice(0,19)}.json`;
+    link.click();
+    alert('✅ Data berhasil diekspor!');
+}
+
+function exportToCSV() {
+    let csv = "Nama,Kode,Tanggal,SkorAkhir,DetailPerSubtest\n";
+    
+    let totalCorrect = 0;
+    let totalPoints = 0;
+    let subtestDetails = "";
+    
+    for (let i = 0; i < subtests.length; i++) {
+        const scoreData = calculateSubtestScore(i);
+        totalCorrect += scoreData.correct;
+        totalPoints += scoreData.total;
+        subtestDetails += `${i+1}.${subtests[i].shortName}: ${scoreData.correct}/${scoreData.total} | `;
+    }
+    
+    const finalScore = totalPoints > 0 ? Math.round((totalCorrect / totalPoints) * 1000) : 0;
+    
+    const row = `"${state.participantName}","${state.accessCode}","${new Date().toLocaleString('id-ID')}","${finalScore}","${subtestDetails}"`;
+    csv += row + "\n";
+    
+    const blob = new Blob([csv], {type: 'text/csv'});
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `tryout_${state.participantName}_${new Date().toISOString().slice(0,19)}.csv`;
+    link.click();
+    alert('✅ CSV berhasil diekspor!');
+}
+
+// ==================== KIRIM KE GOOGLE SHEETS ====================
+function sendToGoogleSheet() {
+    // Ganti URL_INI dengan URL dari Google Apps Script nanti
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwf8nbfOWx5skD9haaT7xxgUAJfLFOrH17OuV8NP_uWjkbhowLShcB5vWni4f2ts6S8zA/exec";
+    
+    const data = {
+        timestamp: new Date().toISOString(),
+        name: state.participantName,
+        code: state.accessCode,
+        answers: state.answers,
+        scores: {}
+    };
+    
+    for (let i = 0; i < subtests.length; i++) {
+        const scoreData = calculateSubtestScore(i);
+        data.scores[i] = {
+            correct: scoreData.correct,
+            total: scoreData.total,
+            subtestName: subtests[i].name
+        };
+    }
+    
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }).then(() => {
+        alert('✅ Hasil tryout berhasil dikirim ke Google Sheets!');
+    }).catch(error => {
+        console.error('Error:', error);
+        alert('❌ Gagal mengirim. Coba gunakan tombol Export JSON manual.');
+    });
 }
 
 // Panggil fungsi loadSavedTheme saat halaman selesai dimuat
