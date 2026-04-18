@@ -10,16 +10,16 @@ const subtests = [
 ];
 
 // ==================== DATA SISWA DAN KODE AKSES ====================
-const studentData = [
-    { name: "Xavier", code: "UTBKSMARRT#1" },
-    { name: "Xavier C. Nathan", code: "UTBKSMARRT#2" },
-    { name: "Livia", code: "UTBKSMARRT#3" },
-    { name: "Samuel Thrystan Marsidi", code: "UTBKSMARRT#4" },
-    { name: "Benedicta Filia Dominique", code: "UTBKSMARRT#4" },
-    { name: "Bimbel SMARRT", code: "UTBKSMARRT#5" },
-    { name: "Tiara", code: "UTBKSMARRT#6" },
-    { name: "Reni", code: "UTBKSMARRT#7" },
-    { name: "Maya", code: "UTBKSMARRT#8" }
+// const studentData = [
+//    { name: "Xavier", code: "UTBKSMARRT#1" },
+//    { name: "Xavier C. Nathan", code: "UTBKSMARRT#2" },
+//    { name: "Livia", code: "UTBKSMARRT#3" },
+//    { name: "Samuel Thrystan Marsidi", code: "UTBKSMARRT#4" },
+//    { name: "Benedicta Filia Dominique", code: "UTBKSMARRT#4" },
+//    { name: "Bimbel SMARRT", code: "UTBKSMARRT#5" },
+//    { name: "Tiara", code: "UTBKSMARRT#6" },
+//    { name: "Reni", code: "UTBKSMARRT#7" },
+//    { name: "Maya", code: "UTBKSMARRT#8" }
 ];
 
 // Untuk menyimpan kode yang sudah digunakan (agar tidak bisa dipakai ulang)
