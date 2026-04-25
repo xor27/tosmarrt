@@ -519,7 +519,7 @@ body {
     font-size: 1em;
     font-weight: 600;
     color: white;
-    background: linear-gradient(90deg, #48bb78, #38a169);
+    background: linear-gradient(90deg, #667eea, #764ba2);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -528,7 +528,7 @@ body {
 
 .btn-finish:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 /* Halaman Transisi */
@@ -547,7 +547,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px;
-    background: linear-gradient(135deg, #48bb78, #38a169);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 50%;
     font-size: 3em;
     color: white;
