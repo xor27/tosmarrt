@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    color: #fff;
+    color: #2d3748;
 }
 
 /* Sembunyikan halaman yang tidak aktif */
@@ -38,7 +38,7 @@ body {
 .hero h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
-    background: linear-gradient(90deg, #7b2cbf, #9b4dff);
+    background: linear-gradient(90deg, #667eea, #764ba2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -46,21 +46,23 @@ body {
 
 .subtitle {
     font-size: 1.3em;
-    color: #a0a0a0;
+    color: #4a5568;
     margin-bottom: 40px;
 }
 
 /* Kartu Informasi */
 .info-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: white;
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
 }
 
 .info-card h2 {
     margin-bottom: 20px;
-    color: #7b2cbf;
+    color: #6b46c1;
 }
 
 .subtest-list {
@@ -73,29 +75,38 @@ body {
     align-items: center;
     padding: 15px 20px;
     margin: 10px 0;
-    background: rgba(255, 255, 255, 0.03);
+    background: #f7fafc;
     border-radius: 10px;
-    border-left: 4px solid #7b2cbf;
+    border-left: 4px solid #6b46c1;
+    transition: all 0.3s ease;
+}
+
+.subtest-item:hover {
+    background: #edf2f7;
+    transform: translateX(5px);
 }
 
 .subtest-name {
     font-weight: 500;
+    color: #2d3748;
 }
 
 .subtest-detail {
-    color: #9b4dff;
+    color: #667eea;
     font-size: 0.9em;
 }
 
 .total-info {
     margin-top: 20px;
     padding: 15px;
-    background: linear-gradient(90deg, rgba(123, 44, 191, 0.3), rgba(155, 77, 255, 0.3));
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
     border-radius: 10px;
     text-align: center;
+    font-weight: bold;
+    color: #4a5568;
 }
 
-/* Input Nama */
+/* Input Section */
 .input-section {
     margin: 30px 0;
     text-align: center;
@@ -105,6 +116,7 @@ body {
     display: block;
     margin-bottom: 10px;
     font-size: 1.1em;
+    color: #2d3748;
 }
 
 .input-section input {
@@ -113,20 +125,22 @@ body {
     margin: 0 auto;
     padding: 15px 20px;
     font-size: 1.1em;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #e2e8f0;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: white;
+    color: #2d3748;
     outline: none;
     display: block;
+    transition: all 0.3s ease;
 }
 
 .input-section input:focus {
-    border-color: #7b2cbf;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
 }
 
 .input-section input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: #a0aec0;
 }
 
 /* Tombol */
@@ -134,16 +148,18 @@ body {
     padding: 18px 50px;
     font-size: 1.2em;
     font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #7b2cbf, #9b4dff);
+    color: white;
+    background: linear-gradient(90deg, #667eea, #764ba2);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .btn-start:hover {
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 /* Halaman Tryout */
@@ -158,17 +174,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background: rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: white;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header-left h2 {
-    color: #7b2cbf;
+    color: #6b46c1;
     margin-bottom: 5px;
 }
 
 .header-left p {
-    color: #a0a0a0;
+    color: #718096;
     font-size: 0.9em;
 }
 
@@ -176,19 +193,31 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 15px 25px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50px;
     font-size: 1.5em;
     font-weight: 600;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .timer.warning {
-    background: rgba(255, 193, 7, 0.3);
+    background: linear-gradient(135deg, #ecc94b, #b7791f);
 }
 
 .timer.danger {
-    background: rgba(220, 53, 69, 0.3);
+    background: linear-gradient(135deg, #f56565, #c53030);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.timer-icon {
+    font-size: 1.2em;
 }
 
 /* Area Soal */
@@ -202,6 +231,7 @@ body {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
+    background: #f7fafc;
 }
 
 .question-header {
@@ -214,43 +244,50 @@ body {
 .question-number {
     font-size: 1.3em;
     font-weight: 600;
-    color: #7b2cbf;
+    color: #6b46c1;
 }
 
 .question-type {
-    padding: 8px 16px;
-    background: rgba(123, 44, 191, 0.3);
+    padding: 6px 16px;
+    background: rgba(102, 126, 234, 0.1);
     border-radius: 20px;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    color: #667eea;
 }
 
 .question-content {
-    background: rgba(255, 255, 255, 0.05);
+    background: white;
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 25px;
     line-height: 1.8;
+    color: #2d3748;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
 }
 
 /* Opsi Jawaban */
 .option {
     display: flex;
     align-items: center;
-    padding: 18px 20px;
+    padding: 15px 20px;
     margin: 12px 0;
-    background: rgba(255, 255, 255, 0.03);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: white;
+    border: 2px solid #e2e8f0;
     border-radius: 12px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .option:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: #edf2f7;
+    border-color: #667eea;
+    transform: translateX(5px);
 }
 
 .option.selected {
-    background: rgba(123, 44, 191, 0.15);
-    border-color: #7b2cbf;
+    background: rgba(102, 126, 234, 0.1);
+    border-color: #667eea;
 }
 
 .option-letter {
@@ -259,15 +296,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: #edf2f7;
     border-radius: 50%;
     margin-right: 15px;
     font-weight: 600;
+    color: #4a5568;
 }
 
 .option.selected .option-letter {
-    background: #7b2cbf;
-    color: #1a1a2e;
+    background: #667eea;
+    color: white;
 }
 
 /* Benar/Salah */
@@ -280,56 +318,71 @@ body {
 .checkbox-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
     padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: white;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
 }
 
 .checkbox-item label {
     flex: 1;
-    margin-right: 20px;
+    font-weight: 500;
+    color: #2d3748;
 }
 
 .checkbox-options {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .checkbox-btn {
-    padding: 8px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
-    color: #fff;
-    border-radius: 8px;
+    padding: 8px 24px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    color: #4a5568;
+    border-radius: 25px;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.checkbox-btn:hover {
+    background: #edf2f7;
+    transform: scale(1.02);
 }
 
 .checkbox-btn.selected-true {
-    background: rgba(40, 167, 69, 0.3);
-    border-color: #28a745;
+    background: #48bb78 !important;
+    border-color: #48bb78 !important;
+    color: white !important;
 }
 
 .checkbox-btn.selected-false {
-    background: rgba(220, 53, 69, 0.3);
-    border-color: #dc3545;
+    background: #f56565 !important;
+    border-color: #f56565 !important;
+    color: white !important;
 }
 
 /* Isian Singkat */
 .short-answer-input {
     width: 100%;
     max-width: 300px;
-    padding: 15px 20px;
-    font-size: 1.2em;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: 2px solid #e2e8f0;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: white;
+    color: #2d3748;
     outline: none;
+    transition: all 0.3s ease;
 }
 
 .short-answer-input:focus {
-    border-color: #7b2cbf;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
 }
 
 /* Tombol Navigasi */
@@ -341,36 +394,45 @@ body {
 }
 
 .btn-nav {
-    padding: 15px 30px;
+    padding: 12px 30px;
     font-size: 1em;
     font-weight: 500;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
-    color: #fff;
+    border: 2px solid #e2e8f0;
+    background: white;
+    color: #4a5568;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-nav:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #edf2f7;
+    border-color: #667eea;
 }
 
 .btn-next {
-    background: linear-gradient(90deg, rgba(123, 44, 191, 0.5), rgba(155, 77, 255, 0.5));
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+}
+
+.btn-next:hover {
+    transform: translateX(3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 /* Sidebar Navigasi Soal */
 .question-nav-sidebar {
     width: 280px;
     padding: 25px;
-    background: rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    background: white;
+    border-left: 2px solid #e2e8f0;
     overflow-y: auto;
 }
 
 .question-nav-sidebar h3 {
     margin-bottom: 20px;
-    color: #7b2cbf;
+    color: #6b46c1;
 }
 
 .question-grid {
@@ -386,29 +448,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    border: 2px solid #e2e8f0;
+    background: white;
+    color: #4a5568;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.question-btn:hover {
+    background: #edf2f7;
+    border-color: #667eea;
+    transform: scale(1.05);
 }
 
 .question-btn.answered {
-    background: rgba(40, 167, 69, 0.4);
-    border-color: #28a745;
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
 }
 
 .question-btn.current {
-    background: rgba(123, 44, 191, 0.4);
-    border-color: #7b2cbf;
+    background: #6b46c1;
+    border-color: #6b46c1;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(107, 70, 193, 0.3);
 }
 
 /* Legend */
 .legend {
     margin-bottom: 25px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.03);
+    background: #f7fafc;
     border-radius: 10px;
 }
 
@@ -417,46 +490,55 @@ body {
     align-items: center;
     gap: 10px;
     margin: 8px 0;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .legend-box {
     width: 24px;
     height: 24px;
     border-radius: 6px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #e2e8f0;
 }
 
 .legend-box.unanswered {
-    background: rgba(255, 255, 255, 0.05);
+    background: white;
 }
 
 .legend-box.answered {
-    background: rgba(40, 167, 69, 0.4);
-    border-color: #28a745;
+    background: #667eea;
+    border-color: #667eea;
 }
 
 .legend-box.current {
-    background: rgba(123, 44, 191, 0.4);
-    border-color: #7b2cbf;
+    background: #6b46c1;
+    border-color: #6b46c1;
 }
 
 .btn-finish {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #28a745, #20c997);
+    color: white;
+    background: linear-gradient(90deg, #48bb78, #38a169);
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-finish:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
 }
 
 /* Halaman Transisi */
 .transition-content {
     text-align: center;
     padding: 60px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .checkmark {
@@ -466,9 +548,15 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px;
-    background: linear-gradient(135deg, #28a745, #20c997);
+    background: linear-gradient(135deg, #48bb78, #38a169);
     border-radius: 50%;
     font-size: 3em;
+    color: white;
+}
+
+.transition-content h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
 }
 
 /* Halaman Hasil */
@@ -488,15 +576,21 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
+    background: white;
     border-radius: 12px;
-    border-left: 4px solid #7b2cbf;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .result-item-score .answered {
     font-size: 1.3em;
     font-weight: 600;
-    color: #28a745;
+    color: #48bb78;
+}
+
+.result-total {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
 }
 
 /* Modal */
@@ -507,7 +601,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -518,42 +612,28 @@ body {
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: white;
     padding: 40px;
     border-radius: 20px;
     text-align: center;
     max-width: 400px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Light mode untuk modal */
-body.light-mode .modal-content {
-    background: linear-gradient(135deg, #ffffff, #f0f2f5);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+.modal-content h3 {
+    color: #6b46c1;
+    margin-bottom: 15px;
 }
 
-body.light-mode .modal-content h3 {
-    color: #7b2cbf;
+.modal-content p {
+    color: #4a5568;
+    margin-bottom: 10px;
 }
 
-body.light-mode .modal-content p {
-    color: #333;
-}
-
-body.light-mode .modal-warning {
-    color: #dc3545 !important;
-}
-
-body.light-mode .btn-cancel {
-    background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    color: #333;
-}
-
-body.light-mode .btn-cancel:hover {
-    background: rgba(0, 0, 0, 0.1);
+.modal-warning {
+    color: #e53e3e !important;
+    font-weight: 500;
 }
 
 .modal-buttons {
@@ -568,312 +648,97 @@ body.light-mode .btn-cancel:hover {
     font-size: 1em;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-cancel {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: #edf2f7;
+    border: none;
+    color: #4a5568;
+}
+
+.btn-cancel:hover {
+    background: #e2e8f0;
 }
 
 .btn-confirm {
-    background: linear-gradient(90deg, #7b2cbf, #9b4dff);
+    background: linear-gradient(90deg, #667eea, #764ba2);
     border: none;
-    color: #fff;
+    color: white;
 }
 
-/* Animasi untuk modal timeout */
+.btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Modal Timeout */
 #timeout-modal .modal-content {
-    animation: slideIn 0.3s ease;
+    border-top: 4px solid #e53e3e;
+}
+
+#timeout-modal .modal-content h3 {
+    color: #e53e3e;
 }
 
 #timeout-countdown {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffc107;
+    color: #e53e3e;
     display: inline-block;
     min-width: 30px;
+    animation: blink 1s infinite;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Efek berkedip untuk countdown */
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
 }
 
-#timeout-countdown {
-    animation: blink 1s infinite;
+/* Responsive */
+@media (max-width: 900px) {
+    .tryout-main {
+        flex-direction: column;
+    }
+    
+    .question-nav-sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #e2e8f0;
+    }
+    
+    .question-grid {
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
 
-/* ==================== TOMBOL TOGGLE THEME ==================== */
-.theme-toggle {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    padding: 8px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: white;
-}
-
-.theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-}
-
-/* ==================== LIGHT MODE ==================== */
-body.light-mode {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 50%, #dce1ec 100%);
-    color: #1a1a2e;
-}
-
-body.light-mode .info-card,
-body.light-mode .result-summary,
-body.light-mode .modal-content {
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .subtest-item {
-    background: rgba(0, 0, 0, 0.03);
-    border-left-color: #7b2cbf;
-}
-
-body.light-mode .subtest-name {
-    color: #1a1a2e;
-}
-
-body.light-mode .timer {
-    background: rgba(0, 0, 0, 0.1);
-    color: #1a1a2e;
-}
-
-body.light-mode .question-content {
-    background: rgba(0, 0, 0, 0.05);
-    color: #1a1a2e;
-}
-
-body.light-mode .option {
-    background: rgba(0, 0, 0, 0.03);
-    border-color: rgba(0, 0, 0, 0.1);
-    color: #1a1a2e;
-}
-
-body.light-mode .option:hover {
-    background: rgba(0, 0, 0, 0.08);
-}
-
-body.light-mode .question-nav-sidebar {
-    background: rgba(0, 0, 0, 0.05);
-    border-left-color: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .question-btn {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.15);
-    color: #1a1a2e;
-}
-
-body.light-mode .question-btn:hover {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .legend {
-    background: rgba(0, 0, 0, 0.03);
-}
-
-body.light-mode .input-section input {
-    background: white;
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #1a1a2e;
-}
-
-body.light-mode .input-section input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-}
-
-body.light-mode .btn-nav {
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #1a1a2e;
-}
-
-body.light-mode .btn-nav:hover {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .tryout-header {
-    background: rgba(0, 0, 0, 0.05);
-    border-bottom-color: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .header-left h2 {
-    color: #7b2cbf;
-}
-
-body.light-mode .header-left p {
-    color: #555;
-}
-
-body.light-mode .theme-toggle {
-    background: rgba(0, 0, 0, 0.1);
-    color: #1a1a2e;
-    border-color: rgba(0, 0, 0, 0.2);
-}
-
-body.light-mode .theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-body.light-mode .checkbox-item {
-    background: rgba(0, 0, 0, 0.03);
-    border-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Tombol Benar/Salah di Light Mode */
-body.light-mode .checkbox-btn {
-    background: #e9ecef;
-    border: 1px solid #adb5bd;
-    color: #212529;
-    padding: 8px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-body.light-mode .checkbox-btn:hover {
-    background: #dee2e6;
-    transform: scale(1.02);
-}
-
-body.light-mode .checkbox-btn.selected-true {
-    background: #28a745 !important;
-    border-color: #28a745 !important;
-    color: white !important;
-}
-
-body.light-mode .checkbox-btn.selected-false {
-    background: #dc3545 !important;
-    border-color: #dc3545 !important;
-    color: white !important;
-}
-
-body.light-mode .short-answer-input {
-    background: white;
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #1a1a2e;
-}
-
-/* Perbaikan modal transisi untuk light mode */
-body.light-mode .transition-content .checkmark {
-    background: linear-gradient(135deg, #28a745, #20c997);
-}
-
-body.light-mode .next-subtest-info {
-    background: rgba(123, 44, 191, 0.1);
-    border: 1px solid rgba(123, 44, 191, 0.2);
-}
-
-/* Perbaikan warna navigasi soal di light mode */
-body.light-mode .question-btn.answered {
-    background: rgba(40, 167, 69, 0.7) !important;
-    border-color: #28a745 !important;
-    color: white !important;
-}
-
-body.light-mode .question-btn.current {
-    background: rgba(123, 44, 191, 0.7) !important;
-    border-color: #7b2cbf !important;
-    color: white !important;
-    transform: scale(1.05);
-}
-
-body.light-mode .question-btn {
-    background: rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #1a1a2e;
-}
-
-body.light-mode .question-btn:hover {
-    background: rgba(0, 0, 0, 0.15);
-}
-
-/* Perbaikan legend di light mode */
-body.light-mode .legend-box.answered {
-    background: rgba(40, 167, 69, 0.7);
-    border-color: #28a745;
-}
-
-body.light-mode .legend-box.current {
-    background: rgba(123, 44, 191, 0.7);
-    border-color: #7b2cbf;
-}
-
-body.light-mode .legend-box.unanswered {
-    background: rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Perbaikan modal konfirmasi dan timeout untuk light mode */
-body.light-mode .modal {
-    background: rgba(0, 0, 0, 0.6);
-}
-
-body.light-mode .modal-content {
-    background: white;
-    border: 2px solid #7b2cbf;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-body.light-mode .modal-content h3 {
-    color: #7b2cbf;
-}
-
-body.light-mode .modal-content p {
-    color: #333;
-}
-
-body.light-mode .modal-warning {
-    color: #dc3545 !important;
-}
-
-body.light-mode .btn-cancel {
-    background: #f0f0f0;
-    border: 1px solid #ccc;
-    color: #333;
-}
-
-body.light-mode .btn-cancel:hover {
-    background: #e0e0e0;
-}
-
-body.light-mode .btn-confirm {
-    background: linear-gradient(90deg, #7b2cbf, #9b4dff);
-    color: white;
-}
-
-/* Perbaikan modal timeout light mode */
-body.light-mode #timeout-modal .modal-content {
-    background: white;
-    border: 2px solid #dc3545;
-}
-
-body.light-mode #timeout-modal .modal-content h3 {
-    color: #dc3545;
-}
-
-body.light-mode #timeout-countdown {
-    color: #dc3545;
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .subtest-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .tryout-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .question-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+    }
+    
+    .checkbox-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
