@@ -42,22 +42,48 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Mengubah warna teks subtitle dan label jadi putih */
-.subtitle,
-.input-section label,
-.input-section input::placeholder {
+.subtitle {
+    font-size: 1.3em;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Input Section - VERSION BARU (PUTIH) */
+.input-section {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
     color: white;
 }
 
 .input-section input {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
     color: white;
+    outline: none;
+    display: block;
+    transition: all 0.3s ease;
 }
 
 .input-section input:focus {
     border-color: #fbbf24;
     background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+}
+
+.input-section input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Kartu Informasi */
@@ -114,43 +140,6 @@ body {
     text-align: center;
     font-weight: bold;
     color: #4a5568;
-}
-
-/* Input Section */
-.input-section {
-    margin: 30px 0;
-    text-align: center;
-}
-
-.input-section label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #2d3748;
-}
-
-.input-section input {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    font-size: 1.1em;
-    border: 2px solid #e2e8f0;
-    border-radius: 10px;
-    background: white;
-    color: #2d3748;
-    outline: none;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.input-section input:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-}
-
-.input-section input::placeholder {
-    color: #a0aec0;
 }
 
 /* Tombol */
