@@ -86,26 +86,26 @@ const answerKeys = {
 
     // SUBTEST 4: Pengetahuan Kuantitatif (20 soal)
     3: {
-        0: '13',    // soal 1 (isian angka)
-        1: '7',     // soal 2 (isian angka)
-        2: 'E',    // soal 3
-        3: 'D',     // soal 4
-        4: 'B',     // soal 5
-        5: 'D',     // soal 6
-        6: 'C',     // soal 7
-        7: 'A',     // soal 8
-        8: 'B',     // soal 9
-        9: 'D',     // soal 10
+        0: 'A',    // soal 1 (isian angka)
+        1: 'B',     // soal 2 (isian angka)
+        2: 'A',    // soal 3
+        3: 'A',     // soal 4
+        4: 'C',     // soal 5
+        5: 'E',     // soal 6
+        6: 'E',     // soal 7
+        7: 'C',     // soal 8
+        8: '270',     // soal 9
+        9: 'C',     // soal 10
         10: 'A',    // soal 11
-        11: 'B',    // soal 12
-        12: 'A',    // soal 13
-        13: 'D',    // soal 14
-        14: 'C',    // soal 15
-        15: 'C',    // soal 16
-        16: 'A',    // soal 17
-        17: '95',   // soal 18 (isian angka)
-        18: 'C',    // soal 19
-        19: 'C'     // soal 20
+        11: 'C',    // soal 12
+        12: '3600',    // soal 13
+        13: 'C',    // soal 14
+        14: '225000',    // soal 15
+        15: 'B',    // soal 16
+        16: 'D',    // soal 17
+        17: 'A',   // soal 18 (isian angka)
+        18: 'D',    // soal 19
+        19: 'E'     // soal 20
     },
 
     // SUBTEST 5: Literasi Bahasa Indonesia (20 soal)
