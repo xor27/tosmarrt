@@ -94,11 +94,11 @@ const answerKeys = {
         5: 'E',     // soal 6
         6: 'E',     // soal 7
         7: 'C',     // soal 8
-        8: '270',     // soal 9
+        8: 'B',     // soal 9
         9: 'C',     // soal 10
         10: 'A',    // soal 11
         11: 'C',    // soal 12
-        12: '3600',    // soal 13
+        12: 'D',    // soal 13
         13: 'C',    // soal 14
         14: '225000',    // soal 15
         15: 'B',    // soal 16
