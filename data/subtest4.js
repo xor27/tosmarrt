@@ -8,11 +8,11 @@ const subtest4 = [
         type: 'multiple-choice',
         text: `Jika p dan q adalah bilangan bulat positif terkecil yang memenuhi 250 × 18 × p = q², maka nilai q + p = ...`,
         options: [
-            { letter: 'A', text: '45' },
-            { letter: 'B', text: '55' },
-            { letter: 'C', text: '65' },
-            { letter: 'D', text: '75' },
-            { letter: 'E', text: '85' }
+            { letter: 'A', text: '145' },
+            { letter: 'B', text: '155' },
+            { letter: 'C', text: '165' },
+            { letter: 'D', text: '175' },
+            { letter: 'E', text: '185' }
         ]
     },
     // SOAL 2
@@ -36,7 +36,7 @@ const subtest4 = [
         options: [
             { letter: 'A', text: '60 orang' },
             { letter: 'B', text: '72 orang' },
-            { letter: 'C', text: '90 orang' },
+            { letter: 'C', text: '96 orang' },
             { letter: 'D', text: '108 orang' },
             { letter: 'E', text: '120 orang' }
         ]
@@ -45,7 +45,7 @@ const subtest4 = [
     {
         id: 4,
         type: 'multiple-choice',
-        text: `Total harga dua unit rumah (Tipe A dan Tipe B) saat ini adalah Rp1,2 miliar. Tiga tahun yang lalu, harga Tipe B adalah 3 kali harga Tipe A. Jika setiap tahun harga masing-masing naik Rp15 juta, berapakah harga Tipe A saat ini?`,
+        text: `Total harga dua unit rumah (Tipe A dan Tipe B) saat ini adalah Rp1,26 miliar. Tiga tahun yang lalu, harga Tipe B adalah 3 kali harga Tipe A. Jika setiap tahun harga masing-masing naik Rp10 juta, berapakah harga Tipe A saat ini?`,
         options: [
             { letter: 'A', text: 'Rp300 juta' },
             { letter: 'B', text: 'Rp330 juta' },
@@ -73,7 +73,7 @@ const subtest4 = [
         type: 'multiple-choice',
         text: `Bilangan bulat m jika dibagi 4 menghasilkan a sisa 1, dan jika dibagi 5 menghasilkan b sisa 3. Hubungan a dan b adalah ...`,
         options: [
-            { letter: 'A', text: '4a = 5b' },
+            { letter: 'A', text: '4a - 5b = 2' },
             { letter: 'B', text: '4a + 5b = 7' },
             { letter: 'C', text: '4a - 5b = 1' },
             { letter: 'D', text: '5b - 4a = 1' },
@@ -104,11 +104,11 @@ Adalah ...`,
         type: 'multiple-choice',
         text: `Di sebuah klub, 60% anggota mengambil kelas Piano, sisanya Gitar. 80% buku yang tersedia adalah Edisi Baru, sisanya Edisi Lama. 30% siswa Gitar memakai Edisi Lama. Berapa persen buku Edisi Baru yang dipakai siswa Piano terhadap total buku?`,
         options: [
-            { letter: 'A', text: '20%' },
-            { letter: 'B', text: '30%' },
-            { letter: 'C', text: '40%' },
-            { letter: 'D', text: '50%' },
-            { letter: 'E', text: '60%' }
+            { letter: 'A', text: '51%' },
+            { letter: 'B', text: '52%' },
+            { letter: 'C', text: '53%' },
+            { letter: 'D', text: '54%' },
+            { letter: 'E', text: '55%' }
         ]
     },
     // SOAL 9
@@ -117,11 +117,11 @@ Adalah ...`,
         type: 'multiple-choice',
         text: `Diketahui dua bilangan bulat positif x dan y dengan xy = 48. Peluang jumlah x + y ganjil adalah P. Nilai P = ...`,
         options: [
-            { letter: 'A', text: '1/4' },
-            { letter: 'B', text: '1/3' },
+            { letter: 'A', text: '1/5' },
+            { letter: 'B', text: '2/5' },
             { letter: 'C', text: '1/2' },
-            { letter: 'D', text: '2/3' },
-            { letter: 'E', text: '3/4' }
+            { letter: 'D', text: '3/5' },
+            { letter: 'E', text: '4/5' }
         ]
     },
     // SOAL 10
@@ -169,13 +169,13 @@ Adalah ...`,
     {
         id: 13,
         type: 'multiple-choice',
-        text: `Diketahui f(x) = x² dan g(x) = 1/(x² - 3/4). Nilai dari (f ∘ g)(2) = ...`,
+        text: `Diketahui f(x) = x² dan g(x) = 1/(x² - 1). Nilai dari (f ∘ g)(2) = ...`,
         options: [
-            { letter: 'A', text: '1/4' },
-            { letter: 'B', text: '1/2' },
+            { letter: 'A', text: '1/9' },
+            { letter: 'B', text: '1/4' },
             { letter: 'C', text: '1' },
-            { letter: 'D', text: '2' },
-            { letter: 'E', text: '4' }
+            { letter: 'D', text: '4' },
+            { letter: 'E', text: '9' }
         ]
     },
     // SOAL 14
@@ -184,11 +184,11 @@ Adalah ...`,
         type: 'multiple-choice',
         text: `Barisan aritmatika: 27, a, 15, ... Jika 12 × U₈ = U₇ + Uₖ, maka k = ...`,
         options: [
-            { letter: 'A', text: '9' },
-            { letter: 'B', text: '10' },
-            { letter: 'C', text: '11' },
-            { letter: 'D', text: '12' },
-            { letter: 'E', text: '13' }
+            { letter: 'A', text: '31' },
+            { letter: 'B', text: '32' },
+            { letter: 'C', text: '33' },
+            { letter: 'D', text: '34' },
+            { letter: 'E', text: '35' }
         ]
     },
     // SOAL 15
@@ -248,8 +248,8 @@ Jika solusi (p, q), maka 2p + q = ...`,
 (4) Peluang ganjil = 11/21`,
         options: [
             { letter: 'A', text: '(1), (2), (3)' },
-            { letter: 'B', text: '(1), (3)' },
-            { letter: 'C', text: '(2), (4)' },
+            { letter: 'B', text: '(1), (2)' },
+            { letter: 'C', text: '(3), (4)' },
             { letter: 'D', text: '(4) saja' },
             { letter: 'E', text: 'Semua' }
         ]
