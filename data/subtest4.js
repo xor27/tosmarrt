@@ -6,286 +6,265 @@ const subtest4 = [
     {
         id: 1,
         type: 'multiple-choice',
-        text: `Untuk bilangan real a dan b tertentu pada grafik fungsi f(x) = x² - ax + 7 melalui titik (2, 3), (b, 12), dan (b+6, 12). Nilai a + 2b adalah ...`,
+        text: `Jika p dan q adalah bilangan bulat positif terkecil yang memenuhi 250 × 18 × p = q², maka nilai q + p = ...`,
         options: [
-            { letter: 'A', text: '2' },
-            { letter: 'B', text: '3' },
-            { letter: 'C', text: '4' },
-            { letter: 'D', text: '5' },
-            { letter: 'E', text: '6' }
+            { letter: 'A', text: '45' },
+            { letter: 'B', text: '55' },
+            { letter: 'C', text: '65' },
+            { letter: 'D', text: '75' },
+            { letter: 'E', text: '85' }
         ]
     },
     // SOAL 2
     {
         id: 2,
         type: 'multiple-choice',
-        text: `Hasil kali tiga bilangan prima p, q, r dengan p < q < r adalah 2431. Nilai p + q + r adalah ...`,
+        text: `Diketahui f(x) = 3x + 1 dan g(x) = x - 5. Nilai dari f⁻¹(g⁻¹(2)) = ...`,
         options: [
-            { letter: 'A', text: '40' },
-            { letter: 'B', text: '41' },
-            { letter: 'C', text: '42' },
-            { letter: 'D', text: '43' },
-            { letter: 'E', text: '44' }
+            { letter: 'A', text: '0' },
+            { letter: 'B', text: '1' },
+            { letter: 'C', text: '2' },
+            { letter: 'D', text: '3' },
+            { letter: 'E', text: '4' }
         ]
     },
     // SOAL 3
     {
         id: 3,
         type: 'multiple-choice',
-        text: `Banyak bilangan dua digit yang bersisa 3 jika dibagi 7 adalah ...`,
+        text: `Di RW 08, diketahui bahwa 30% dari total penduduk adalah laki-laki dewasa yang berjumlah 54 orang. Jika jumlah penduduk anak-anak adalah 1/6 dari total penduduk, maka berapakah jumlah penduduk perempuan dewasa?`,
         options: [
-            { letter: 'A', text: '13' },
-            { letter: 'B', text: '14' },
-            { letter: 'C', text: '15' },
-            { letter: 'D', text: '16' },
-            { letter: 'E', text: '17' }
+            { letter: 'A', text: '60 orang' },
+            { letter: 'B', text: '72 orang' },
+            { letter: 'C', text: '90 orang' },
+            { letter: 'D', text: '108 orang' },
+            { letter: 'E', text: '120 orang' }
         ]
     },
     // SOAL 4
     {
         id: 4,
         type: 'multiple-choice',
-        text: `Diketahui KPK(6, 20, m) = 4 × KPK(m, 45, n) = 900. Manakah pernyataan yang benar antara kuantitas P dan Q berikut:
-
-P = 3m
-Q = n`,
+        text: `Total harga dua unit rumah (Tipe A dan Tipe B) saat ini adalah Rp1,2 miliar. Tiga tahun yang lalu, harga Tipe B adalah 3 kali harga Tipe A. Jika setiap tahun harga masing-masing naik Rp15 juta, berapakah harga Tipe A saat ini?`,
         options: [
-            { letter: 'A', text: 'Kuantitas P lebih dari Q' },
-            { letter: 'B', text: 'Kuantitas P kurang dari Q' },
-            { letter: 'C', text: 'Kuantitas P sama dengan Q' },
-            { letter: 'D', text: 'Tidak dapat ditentukan hubungan antara kuantitas P dan Q' }
+            { letter: 'A', text: 'Rp300 juta' },
+            { letter: 'B', text: 'Rp330 juta' },
+            { letter: 'C', text: 'Rp360 juta' },
+            { letter: 'D', text: 'Rp390 juta' },
+            { letter: 'E', text: 'Rp420 juta' }
         ]
     },
     // SOAL 5
     {
         id: 5,
         type: 'multiple-choice',
-        text: `Suatu barisan geometri memiliki rasio -3 dan suku ke-5 barisan tersebut sama dengan 1. Berdasarkan informasi yang diberikan, manakah dari pernyataan berikut yang benar?
-
-(1) Suku ke-1 barisan negatif
-(2) Suku ke-9 barisan positif
-(3) Hasil penjumlahan dua suku barisan yang berurutan negatif
-(4) Hasil perkalian dua suku barisan yang berurutan negatif`,
+        text: `Hasil panen (dalam kg) mengikuti pola: 8, 10, 30, 25, 75, 70, ... Berapakah hasil panen pada periode ke-7?`,
         options: [
-            { letter: 'A', text: '(1), (2) dan (3) saja' },
-            { letter: 'B', text: '(1) dan (3) saja' },
-            { letter: 'C', text: '(2) dan (4) saja' },
-            { letter: 'D', text: '(4) saja' },
-            { letter: 'E', text: 'Semua pilihan' }
+            { letter: 'A', text: '210' },
+            { letter: 'B', text: '215' },
+            { letter: 'C', text: '220' },
+            { letter: 'D', text: '225' },
+            { letter: 'E', text: '230' }
         ]
     },
     // SOAL 6
     {
         id: 6,
         type: 'multiple-choice',
-        text: `Luas daerah lingkaran dengan pusat O adalah 9π. Titik M dan N terletak pada lingkaran tersebut sehingga panjang busur MN adalah π. Berdasarkan informasi yang diberikan, manakah dari pernyataan berikut yang benar?
-
-(1) jari-jari lingkaran tersebut adalah 3
-(2) Keliling lingkaran tersebut adalah 6π
-(3) Luas juring MON adalah ³⁄₂ π
-(4) Sudut MON adalah 60°`,
+        text: `Bilangan bulat m jika dibagi 4 menghasilkan a sisa 1, dan jika dibagi 5 menghasilkan b sisa 3. Hubungan a dan b adalah ...`,
         options: [
-            { letter: 'A', text: '(1), (2) dan (3) saja' },
-            { letter: 'B', text: '(1) dan (3) saja' },
-            { letter: 'C', text: '(2) dan (4) saja' },
-            { letter: 'D', text: '(4) saja' },
-            { letter: 'E', text: 'Semua pilihan' }
+            { letter: 'A', text: '4a = 5b' },
+            { letter: 'B', text: '4a + 5b = 7' },
+            { letter: 'C', text: '4a - 5b = 1' },
+            { letter: 'D', text: '5b - 4a = 1' },
+            { letter: 'E', text: '4a + 5b = 1' }
         ]
     },
     // SOAL 7
     {
         id: 7,
         type: 'multiple-choice',
-        text: `Sebuah jembatan memiliki bentuk trapesium ABCD dengan AB sejajar CD, panjang AB = 14 m dan CD = 8 m. Tinggi trapesium adalah 6 m. Diagonal AC dan BD berpotongan di titik P. Perbandingan luas segitiga APB dan CPD adalah ...`,
+        text: `Banyak bilangan 4 digit berbeda dari angka 2, 3, 4, 5, 6, 7, 8 tanpa pengulangan, dengan syarat:
+- Bilangan genap
+- Digit pertama kurang dari digit ketiga
+- Jumlah digit pertama, kedua, dan keempat = 12
+
+Adalah ...`,
         options: [
-            { letter: 'A', text: '1 : 1' },
-            { letter: 'B', text: '7 : 4' },
-            { letter: 'C', text: '2 : 1' },
-            { letter: 'D', text: '14 : 8' },
-            { letter: 'E', text: '49 : 16' }
+            { letter: 'A', text: '12' },
+            { letter: 'B', text: '18' },
+            { letter: 'C', text: '24' },
+            { letter: 'D', text: '30' },
+            { letter: 'E', text: '36' }
         ]
     },
     // SOAL 8
     {
         id: 8,
         type: 'multiple-choice',
-        text: `Diketahui kubus ABCD.EFGH dengan panjang rusuk 6 cm. Titik K adalah titik potong diagonal AC dan BD. Titik L terletak pada rusuk CG sehingga CL : LG = 1 : 2. Tentukan jarak antara titik K dan L.`,
+        text: `Di sebuah klub, 60% anggota mengambil kelas Piano, sisanya Gitar. 80% buku yang tersedia adalah Edisi Baru, sisanya Edisi Lama. 30% siswa Gitar memakai Edisi Lama. Berapa persen buku Edisi Baru yang dipakai siswa Piano terhadap total buku?`,
         options: [
-            { letter: 'A', text: '√18' },
-            { letter: 'B', text: '√20' },
-            { letter: 'C', text: '√22' },
-            { letter: 'D', text: '√24' },
-            { letter: 'E', text: '√26' }
+            { letter: 'A', text: '20%' },
+            { letter: 'B', text: '30%' },
+            { letter: 'C', text: '40%' },
+            { letter: 'D', text: '50%' },
+            { letter: 'E', text: '60%' }
         ]
     },
     // SOAL 9
     {
         id: 9,
         type: 'multiple-choice',
-        text: `Seorang peternak memiliki 16 ayam hitam dan 14 ayam putih. Diketahui ada 10 ayam putih betina. Berapa banyak cara memilih 4 ayam putih dengan tepat 2 ayam betina dan 2 ayam jantan ...`,
+        text: `Diketahui dua bilangan bulat positif x dan y dengan xy = 48. Peluang jumlah x + y ganjil adalah P. Nilai P = ...`,
         options: [
-            { letter: 'A', text: '180' },
-            { letter: 'B', text: '270' },
-            { letter: 'C', text: '360' },
-            { letter: 'D', text: '540' },
-            { letter: 'E', text: '1080' }
+            { letter: 'A', text: '1/4' },
+            { letter: 'B', text: '1/3' },
+            { letter: 'C', text: '1/2' },
+            { letter: 'D', text: '2/3' },
+            { letter: 'E', text: '3/4' }
         ]
     },
     // SOAL 10
     {
         id: 10,
         type: 'multiple-choice',
-        text: `Seorang peternak memiliki 16 ayam hitam dan 14 ayam putih. Diketahui ada 10 ayam putih betina. Jika dipilih 2 ayam secara acak, peluang terambil 1 ayam betina putih dan 1 ayam hitam adalah ...`,
+        text: `Fungsi ketinggian bola h(t) = b(t - 3)². Jika tinggi bola pada detik ke-1 adalah 12 meter, tinggi awal bola (t = 0) adalah ... meter.`,
         options: [
-            { letter: 'A', text: '30/87' },
-            { letter: 'B', text: '31/87' },
-            { letter: 'C', text: '32/87' },
-            { letter: 'D', text: '33/87' },
-            { letter: 'E', text: '34/87' }
+            { letter: 'A', text: '18' },
+            { letter: 'B', text: '24' },
+            { letter: 'C', text: '27' },
+            { letter: 'D', text: '30' },
+            { letter: 'E', text: '36' }
         ]
     },
     // SOAL 11
     {
         id: 11,
         type: 'multiple-choice',
-        text: `Diberikan sistem persamaan linear dua variabel berikut ini:
-
-x + 3y = 7
-2x + by = -1
-
-Tentukan nilai dari bilangan bulat b terbesar sehingga y juga merupakan bilangan bulat ...`,
+        text: `Lampu A menyala setiap 12 menit, B setiap 18 menit, C setiap 24 menit. Jika pertama kali bersama pukul 08.00, pukul berapa mereka menyala bersama untuk keempat kalinya?`,
         options: [
-            { letter: 'A', text: '21' },
-            { letter: 'B', text: '22' },
-            { letter: 'C', text: '23' },
-            { letter: 'D', text: '24' },
-            { letter: 'E', text: '25' }
+            { letter: 'A', text: '10.24' },
+            { letter: 'B', text: '10.48' },
+            { letter: 'C', text: '11.12' },
+            { letter: 'D', text: '11.36' },
+            { letter: 'E', text: '12.00' }
         ]
     },
     // SOAL 12
     {
         id: 12,
         type: 'multiple-choice',
-        text: `Untuk bilangan bulat positif n < 50, diketahui bahwa √(4n + 9) merupakan bilangan bulat. Nilai terbesar dari √(4n + 9) adalah ...`,
+        text: `Apakah mobil A lebih cepat sampai daripada mobil B jika menempuh jarak yang sama?
+(i) Kecepatan A 20 km/jam lebih besar dari kecepatan B.
+(ii) B memerlukan 3 jam jika sendirian.`,
         options: [
-            { letter: 'A', text: '11' },
-            { letter: 'B', text: '12' },
-            { letter: 'C', text: '13' },
-            { letter: 'D', text: '14' },
-            { letter: 'E', text: '15' }
+            { letter: 'A', text: '(i) cukup, (ii) tidak' },
+            { letter: 'B', text: '(ii) cukup, (i) tidak' },
+            { letter: 'C', text: 'Keduanya bersama cukup' },
+            { letter: 'D', text: 'Masing-masing cukup' },
+            { letter: 'E', text: 'Tidak cukup' }
         ]
     },
     // SOAL 13
     {
         id: 13,
         type: 'multiple-choice',
-        text: `Banyak permutasi 7 digit yaitu 1, 2, 3, 5, 7, 8, 9 dengan syarat digit-digit genap tidak berdampingan adalah ...`,
+        text: `Diketahui f(x) = x² dan g(x) = 1/(x² - 3/4). Nilai dari (f ∘ g)(2) = ...`,
         options: [
-            { letter: 'A', text: '1440' },
-            { letter: 'B', text: '2160' },
-            { letter: 'C', text: '2880' },
-            { letter: 'D', text: '3600' },
-            { letter: 'E', text: '4320' }
+            { letter: 'A', text: '1/4' },
+            { letter: 'B', text: '1/2' },
+            { letter: 'C', text: '1' },
+            { letter: 'D', text: '2' },
+            { letter: 'E', text: '4' }
         ]
     },
     // SOAL 14
     {
         id: 14,
         type: 'multiple-choice',
-        text: `Dua buah kereta dari stasiun X dan Y yang berjarak 300 km berangkat bersamaan tepat pukul 08.00 dari jalur 1 dan jalur 2. Kereta tanpa berhenti dari X menuju Y dengan kecepatan rata-rata 35 km/jam sedangkan dari Y ke X dengan kecepatan rata-rata 25 km/jam. Kedua kereta akan berpapasan pada pukul ...`,
+        text: `Barisan aritmatika: 27, a, 15, ... Jika 12 × U₈ = U₇ + Uₖ, maka k = ...`,
         options: [
-            { letter: 'A', text: '11.00' },
-            { letter: 'B', text: '12.00' },
-            { letter: 'C', text: '13.00' },
-            { letter: 'D', text: '14.00' },
-            { letter: 'E', text: '15.00' }
+            { letter: 'A', text: '9' },
+            { letter: 'B', text: '10' },
+            { letter: 'C', text: '11' },
+            { letter: 'D', text: '12' },
+            { letter: 'E', text: '13' }
         ]
     },
     // SOAL 15
     {
         id: 15,
-        type: 'short-answer',
-        text: `Sebuah toko baju memberikan diskon 20% untuk semua item. Karena ada promo Lebaran, toko memberikan diskon tambahan 10% dari harga setelah diskon pertama. Jika harga setelah diskon adalah Rp162.000,00 maka harga awal baju tersebut adalah ...`,
-        placeholder: 'Masukkan jawaban (angka)'
+        type: 'multiple-choice',
+        text: `Diketahui sistem:
+3/x + 2/y = 5, x + 3y = 4
+Jika solusi (p, q), maka 2p + q = ...`,
+        options: [
+            { letter: 'A', text: '1' },
+            { letter: 'B', text: '2' },
+            { letter: 'C', text: '3' },
+            { letter: 'D', text: '4' },
+            { letter: 'E', text: '5' }
+        ]
     },
     // SOAL 16
     {
         id: 16,
-        type: 'multiple-choice',
-        text: `Dalam klub tenis meja, anggota yang menyukai tepat satu dari tiga genre musik memiliki perbandingan 3 : 2 : 1. Anggota yang menyukai tepat dua genre berjumlah 45 orang. Anggota yang menyukai ketiga genre berjumlah 25 orang. Jika total anggota yang menyukai sedikitnya satu genre adalah 160 orang, maka banyak anggota terbanyak pada salah satu kelompok "tepat satu genre" adalah ...`,
-        options: [
-            { letter: 'A', text: '40' },
-            { letter: 'B', text: '45' },
-            { letter: 'C', text: '50' },
-            { letter: 'D', text: '55' },
-            { letter: 'E', text: '60' }
-        ]
+        type: 'short-answer',
+        text: `Untuk m bilangan asli, tentukan banyaknya bilangan berbentuk 3m + 7 dengan 4 < m < 12 yang jika dibagi 6 bersisa 2 atau 5.`,
+        placeholder: 'Masukkan jawaban (angka)'
     },
     // SOAL 17
     {
         id: 17,
-        type: 'multiple-choice',
-        text: `Diketahui sistem persamaan:
-
-x + y + z = 6
-x + y - z = 2
-x - y + z = 4
-
-Nilai x + y + z adalah ...`,
-        options: [
-            { letter: 'A', text: '8' },
-            { letter: 'B', text: '4' },
-            { letter: 'C', text: '5' },
-            { letter: 'D', text: '6' },
-            { letter: 'E', text: '7' }
-        ]
+        type: 'short-answer',
+        text: `Bilangan asli terkecil n sehingga √(180 × 42 × n) merupakan bilangan bulat adalah ...`,
+        placeholder: 'Masukkan jawaban (angka)'
     },
     // SOAL 18
     {
         id: 18,
         type: 'multiple-choice',
-        text: `Berikut ini yang merupakan ciri-ciri prisma tegak segi tujuh adalah...
-
-(1) Memiliki sisi 9
-(2) Memiliki 21 rusuk
-(3) Memiliki 14 titik sudut
-(4) Memiliki sisi tegak berbentuk segitiga
-
-Pernyataan yang bernilai benar adalah ...`,
+        text: `Diketahui sin 2θ = 4/5 dengan 0° < 2θ < 90°. Pernyataan yang benar:
+(1) sin θ = 2/√5
+(2) cos θ = 1/√5
+(3) sin θ - cos θ = 1/√5
+(4) sin θ + cos θ = 3/√5`,
         options: [
             { letter: 'A', text: '(1), (2), (3)' },
-            { letter: 'B', text: '(1) dan (3)' },
-            { letter: 'C', text: '(2) dan (4)' },
+            { letter: 'B', text: '(1), (3)' },
+            { letter: 'C', text: '(2), (4)' },
             { letter: 'D', text: '(4) saja' },
-            { letter: 'E', text: 'Semua pilihan' }
+            { letter: 'E', text: 'Semua benar' }
         ]
     },
     // SOAL 19
     {
         id: 19,
         type: 'multiple-choice',
-        text: `Fungsi f dengan f(x) = x + 2b untuk x bilangan real. f memiliki f⁻¹ yang memenuhi f⁻¹(1 + b²) = 9. Manakah hubungan yang tepat antara kuantitas P dan Q berdasarkan informasi yang diberikan?
-
-P = b
-Q = 1`,
+        text: `Dari bilangan 15–35, diambil satu bilangan acak. Manakah pernyataan benar?
+(1) Peluang prima = 6/21
+(2) Peluang komposit = 14/21
+(3) Peluang habis dibagi 4 = 5/21
+(4) Peluang ganjil = 11/21`,
         options: [
-            { letter: 'A', text: 'Kuantitas P lebih dari Q' },
-            { letter: 'B', text: 'Kuantitas P kurang dari Q' },
-            { letter: 'C', text: 'Kuantitas P sama dengan Q' },
-            { letter: 'D', text: 'Tidak dapat ditentukan' }
+            { letter: 'A', text: '(1), (2), (3)' },
+            { letter: 'B', text: '(1), (3)' },
+            { letter: 'C', text: '(2), (4)' },
+            { letter: 'D', text: '(4) saja' },
+            { letter: 'E', text: 'Semua' }
         ]
     },
     // SOAL 20
     {
         id: 20,
         type: 'multiple-choice',
-        text: `Bilangan bulat n jika dibagi 2, hasil baginya x dan sisanya 3. Sedangkan jika dibagi 3 hasil baginya y dan sisanya 2. Hubungan antara x dan y yang benar adalah ...`,
+        text: `Diketahui f(x+2) = bx + 4 dan g(f(x+2)) = bx - 2. Manakah hubungan P dan Q jika P = g(b) untuk b = 1 dan b = 4, dan Q = -2?`,
         options: [
-            { letter: 'A', text: '2x = 3y' },
-            { letter: 'B', text: '2x + 3y = 5' },
-            { letter: 'C', text: '2x + 3y = 1' },
-            { letter: 'D', text: '2x - 3y = 1' },
-            { letter: 'E', text: '3y - 2x = 1' }
+            { letter: 'A', text: 'P ≥ 2Q' },
+            { letter: 'B', text: 'Q < P < 2Q' },
+            { letter: 'C', text: 'P = Q' },
+            { letter: 'D', text: 'P < Q' },
+            { letter: 'E', text: 'Tidak dapat ditentukan' }
         ]
     }
 ];
