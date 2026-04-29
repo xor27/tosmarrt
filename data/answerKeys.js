@@ -95,7 +95,7 @@ const answerKeys = {
         6: 'A',     // soal 7
         7: 'B',     // soal 8
         8: 'B',     // soal 9
-        9: 'D',     // soal 10
+        9: 'E',     // soal 10
         10: 'D',    // soal 11
         11: 'A',    // soal 12
         12: 'A',    // soal 13
@@ -104,7 +104,7 @@ const answerKeys = {
         15: '0',    // soal 16
         16: '210',    // soal 17
         17: 'D',   // soal 18 (isian angka)
-        18: 'B',    // soal 19
+        18: 'C',    // soal 19
         19: 'E'     // soal 20
     },
 
