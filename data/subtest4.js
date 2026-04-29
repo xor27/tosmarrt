@@ -58,7 +58,7 @@ const subtest4 = [
     {
         id: 5,
         type: 'multiple-choice',
-        text: `Hasil panen (dalam kg) mengikuti pola: 8, 10, 30, 25, 75, 70, ... Berapakah hasil panen pada periode ke-7?`,
+        text: `Hasil panen (dalam kg) mengikuti pola: 5, 10, 30, 25, 75, 70, ... Berapakah hasil panen pada periode ke-7?`,
         options: [
             { letter: 'A', text: '210' },
             { letter: 'B', text: '215' },
