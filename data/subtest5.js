@@ -128,11 +128,16 @@ Di dalam kehidupan sehari-hari dijumpai berbagai jenis cairan. Pentingnya cairan
 
 Salah satu model cairan adalah:
 
-s = η⁻¹ × (τ + ατ³)
+<div style="text-align: center;">
+                    <img src="images/LBI5-1.png" alt="Model Cairan" style="max-width: 25%; margin: 8px 0; border-radius: 8px;">
+                </div>
 
 dengan α tetapan.
 
 Untuk aliran dalam pipa, laju geser s sama dengan perubahan kecepatan terhadap posisi s = dv/dy, dengan sumbu y tegak lurus arah aliran dan y = 0 berada di tengah pipa. Integralnya berupa profil kecepatan v(y) yang menyatakan kecepatan aliran pada posisi y.
+<div style="text-align: center;">
+                    <img src="images/LBI5-2.jpeg" alt="Kecepatan Aliran" style="max-width: 25%; margin: 8px 0; border-radius: 8px;">
+                </div>
 
 Cairan dengan α = 0 bersifat Newtonian, cairan dengan α = -0,1 bersifat shear thickening, dan cairan dengan α = 0,1 bersifat shear thinning. Cairan dengan kecepatan aliran tinggi dapat mengalami turbulensi.
 
@@ -155,11 +160,17 @@ Di dalam kehidupan sehari-hari dijumpai berbagai jenis cairan. Pentingnya cairan
 
 Salah satu model cairan adalah:
 
-s = η⁻¹ × (τ + ατ³)
+<div style="text-align: center;">
+                    <img src="images/LBI5-1.png" alt="Model Cairan" style="max-width: 25%; margin: 8px 0; border-radius: 8px;">
+                </div>
 
 dengan α tetapan.
 
 Untuk aliran dalam pipa, laju geser s sama dengan perubahan kecepatan terhadap posisi s = dv/dy, dengan sumbu y tegak lurus arah aliran dan y = 0 berada di tengah pipa. Integralnya berupa profil kecepatan v(y) yang menyatakan kecepatan aliran pada posisi y.
+
+<div style="text-align: center;">
+                    <img src="images/LBI5-2.jpeg" alt="Kecepatan Aliran" style="max-width: 25%; margin: 8px 0; border-radius: 8px;">
+                </div>
 
 Cairan dengan α = 0 bersifat Newtonian, cairan dengan α = -0,1 bersifat <i>shear thickening</i>, dan cairan dengan α = 0,1 bersifat <i>shear thinning</i>. Cairan dengan kecepatan aliran tinggi dapat mengalami turbulensi.
 
@@ -182,11 +193,17 @@ Di dalam kehidupan sehari-hari dijumpai berbagai jenis cairan. Pentingnya cairan
 
 Salah satu model cairan adalah:
 
-s = η⁻¹ × (τ + ατ³)
+<div style="text-align: center;">
+                    <img src="images/LBI5-1.png" alt="Model Cairan" style="max-width: 25%; margin: 8px 0; border-radius: 8px;">
+                </div>
 
 dengan α tetapan.
 
 Untuk aliran dalam pipa, laju geser s sama dengan perubahan kecepatan terhadap posisi s = dv/dy, dengan sumbu y tegak lurus arah aliran dan y = 0 berada di tengah pipa. Integralnya berupa profil kecepatan v(y) yang menyatakan kecepatan aliran pada posisi y.
+
+<div style="text-align: center;">
+                    <img src="images/LBI5-2.jpeg" alt="Kecepatan Aliran" style="max-width: 25%; margin: 8px 0; border-radius: 8px;">
+                </div>
 
 Cairan dengan α = 0 bersifat Newtonian, cairan dengan α = -0,1 bersifat <i>shear thickening</i>, dan cairan dengan α = 0,1 bersifat <i>shear thinning</i>. Cairan dengan kecepatan aliran tinggi dapat mengalami turbulensi.
 

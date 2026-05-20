@@ -558,38 +558,152 @@ body {
     margin-bottom: 20px;
 }
 
-/* Halaman Hasil */
+/* ==================== HALAMAN HASIL ==================== */
+
 .result-content {
     text-align: center;
-    padding: 40px 20px;
-}
-
-.result-grid {
-    display: grid;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.result-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
-    background: white;
-    border-radius: 12px;
-    border-left: 4px solid #667eea;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.result-item-score .answered {
-    font-size: 1.3em;
-    font-weight: 600;
-    color: #48bb78;
-}
-
-.result-total {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+/* Judul dan nama rata tengah */
+.result-content h1 {
     color: white;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.result-name {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Box skor akhir - tanpa kotak, rata tengah */
+.result-total {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border: none;
+}
+
+.result-total h3 {
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.result-total p:first-of-type {
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+    margin: 5px 0;
+}
+
+.result-total p:last-of-type {
+    color: black;
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+
+/* Sembunyikan elemen yang tidak perlu di box skor akhir */
+.result-total div {
+    display: none !important;
+}
+
+/* SATU KOTAK PUTIH UNTUK SEMUA SUBTEST */
+.result-grid {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Setiap subtest - tanpa border, tanpa padding berlebihan */
+.result-item {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 12px 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Subtest terakhir tanpa border bawah */
+.result-item:last-child {
+    border-bottom: none !important;
+}
+
+/* Nama subtest */
+.result-item-name {
+    color: #1a202c !important;
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 2px;
+}
+
+/* Skor subtest */
+.result-item-score {
+    color: #4a5568 !important;
+    font-size: 0.8em;
+    margin-bottom: 6px;
+}
+
+.result-item-score span:first-child {
+    font-weight: 700;
+    color: #2d3748;
+}
+
+/* Detail benar/salah/kosong - dalam 1 baris, warna hitam */
+.result-item > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.75em;
+    color: #4a5568 !important;
+}
+
+.result-item > div:last-child div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #4a5568 !important;
+}
+
+.result-item > div:last-child span {
+    color: #4a5568 !important;
+}
+
+/* Sembunyikan Total Poin */
+.result-item > div:last-child div:last-child {
+    display: none !important;
+}
+
+/* Warna titik indikator */
+.result-item > div:last-child span[style*="background: #28a745"] {
+    background: #28a745 !important;
+}
+
+.result-item > div:last-child span[style*="background: #dc3545"] {
+    background: #dc3545 !important;
+}
+
+.result-item > div:last-child span[style*="background: #6c757d"] {
+    background: #6c757d !important;
 }
 
 /* Modal */
@@ -694,50 +808,111 @@ body {
     50% { opacity: 0.5; }
 }
 
-/* Responsive */
+/* ==================== RESPONSIVE ==================== */
+
+/* Saat layar lebih kecil dari 900px (laptop dikecilkan, tablet, HP) */
 @media (max-width: 900px) {
+    
+    /* Ubah tata letak jadi kolom */
     .tryout-main {
         flex-direction: column;
     }
     
+    /* SEMBUNYIKAN SIDEBAR NOMOR SOAL */
     .question-nav-sidebar {
-        width: 100%;
-        border-left: none;
-        border-top: 2px solid #e2e8f0;
+        display: none !important;
     }
     
-    .question-grid {
-        grid-template-columns: repeat(10, 1fr);
+    /* Area soal jadi full lebar */
+    .question-section {
+        width: 100% !important;
+        padding: 15px !important;
+        order: 1;
     }
-}
-
-@media (max-width: 600px) {
+    
+    /* Header tryout */
+    .tryout-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    /* Judul */
     .hero h1 {
         font-size: 2em;
     }
     
+    .subtitle {
+        font-size: 1.1em;
+    }
+    
+    /* Informasi subtest */
     .subtest-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 5px;
     }
     
-    .tryout-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    /* Opsi jawaban */
+    .option {
+        padding: 10px 12px;
     }
     
-    .question-grid {
-        grid-template-columns: repeat(6, 1fr);
+    .option-letter {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
     }
     
+    /* Tombol navigasi */
     .navigation-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
     }
     
+    .btn-nav {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    /* Timer */
+    .timer {
+        padding: 6px 12px;
+        font-size: 1.1em;
+    }
+    
+    /* Konten soal */
+    .question-content {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    /* Checkbox item */
     .checkbox-item {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* Layar sangat kecil (HP) - penyesuaian tambahan */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    
+    .question-section {
+        padding: 10px !important;
+    }
+    
+    .btn-nav {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .timer {
+        font-size: 1em;
+        padding: 4px 10px;
     }
 }

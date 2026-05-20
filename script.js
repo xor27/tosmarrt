@@ -490,10 +490,10 @@ function showResultPage() {
         const subtestScore = totalPoints > 0 ? Math.round((correctCount / totalPoints) * 1000) : 0;
         
         // Tentukan warna untuk skor
-        let scoreColor = '#ffc107';
-        if (subtestScore >= 800) scoreColor = '#28a745';
-        else if (subtestScore >= 600) scoreColor = '#ffc107';
-        else scoreColor = '#dc3545';
+        let scoreColor = '#00008B';
+        if (subtestScore >= 800) scoreColor = '#00008B';
+        else if (subtestScore >= 600) scoreColor = '#00008B';
+        else scoreColor = '#00008B';
         
         html += `
             <div class="result-item" style="flex-direction: column; align-items: flex-start; gap: 10px;">
@@ -532,26 +532,28 @@ function showResultPage() {
     const finalScore = totalPointsAll > 0 ? Math.round((totalCorrectAll / totalPointsAll) * 1000) : 0;
     
     // Tentukan warna untuk skor akhir
-    let finalScoreColor = '#ffc107';
-    if (finalScore >= 800) finalScoreColor = '#28a745';
-    else if (finalScore >= 600) finalScoreColor = '#ffc107';
-    else finalScoreColor = '#dc3545';
+    let finalScoreColor = '#00008B';
+    if (finalScore >= 800) finalScoreColor = '#00008B';
+    else if (finalScore >= 600) finalScoreColor = '#00008B';
+    else finalScoreColor = '#00008B';
     
     resultGrid.innerHTML = `
-        <div class="result-total" style="background: linear-gradient(90deg, rgba(123,44,191,0.3), rgba(155,77,255,0.3)); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
-            <h3>🎯 SKOR AKHIR</h3>
+        <div class="result-total" style="background: linear-gradient(90deg, rgba(123,44,191,0.3), rgba(155,77,255,0.3)); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center; font-weight: bold;">
+            <h3>SKOR AKHIR</h3>
             <p style="font-size: 3em; margin: 10px 0; font-weight: bold; color: ${finalScoreColor};">${finalScore}</p>
             <p style="font-size: 1.2em;">dari 1000</p>
             <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px; flex-wrap: wrap;">
-                <div>✅ Benar: <strong>${totalCorrectAll}</strong> poin</div>
-                <div>📊 Total Poin: <strong>${totalPointsAll}</strong></div>
-                <div>📝 Soal Dijawab: <strong>${totalAnsweredAll}</strong> dari <strong>${totalQuestionsAll}</strong></div>
+                <div>Benar: <strong>${totalCorrectAll}</strong> poin</div>
+                <div>Total Poin: <strong>${totalPointsAll}</strong></div>
+                <div>Soal Dijawab: <strong>${totalAnsweredAll}</strong> dari <strong>${totalQuestionsAll}</strong></div>
             </div>
         </div>
         ${html}
     `;
     
     saveStudentAnswers();
+    // Kirim otomatis ke Google Sheets
+    sendToGoogleSheet();
     showPage('result-page');
 }
 
@@ -910,7 +912,7 @@ function sendToGoogleSheet() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     }).then(() => {
-        alert('✅ Hasil tryout berhasil dikirim ke Google Sheets!');
+        alert('✅ Hasil tryout berhasil dikirim!');
     }).catch(error => {
         console.error('Error:', error);
         alert('❌ Gagal mengirim. Coba gunakan tombol Export JSON manual.');
@@ -919,3 +921,11 @@ function sendToGoogleSheet() {
 
 // Panggil fungsi loadSavedTheme saat halaman selesai dimuat
 document.addEventListener('DOMContentLoaded', loadSavedTheme);
+
+// Deteksi koneksi kembali dan kirim ulang data yang gagal
+window.addEventListener('online', function() {
+    if (state.participantName && state.answers) {
+        console.log("Koneksi kembali, mencoba mengirim data...");
+        sendToGoogleSheet();
+    }
+});
